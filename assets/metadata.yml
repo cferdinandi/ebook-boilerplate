@@ -1,0 +1,14 @@
+---
+title:
+- type: main
+  text: Your Book Title
+- type: subtitle
+  text: Your book subtitle
+creator:
+- role: author
+  text: Your Name
+publisher:  The Publisher Name
+date: A date or version number
+rights: Copyright information
+cover-image: assets/cover.png
+---
