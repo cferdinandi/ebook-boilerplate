@@ -8,11 +8,17 @@ html {
 body {
 	color: #272727;
 	font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
-	line-height: 1.7;
+	line-height: 1.5;
 	padding: 1em;
-	margin: auto;
 	max-width: 42em;
 	background: #ffffff;
+	font-size: 112.5%;
+}
+
+@media (min-width: 40em) {
+	body {
+		line-height: 1.5625;
+	}
 }
 
 a {
@@ -37,7 +43,7 @@ a:focus {
 }
 
 p {
-	margin: 1em 0;
+	margin: 0 0 1em;
 }
 
 img {
@@ -67,15 +73,16 @@ h4, h5, h6 {
 h1 {
 	font-size: 2.5em;
 	margin-top: 0;
-	page-break-before: always;
-}
-
-h1:first-child {
-	page-break-before: avoid;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 h2 {
 	font-size: 1.8em;
+	margin-top: 0;
+	padding-top: 0;
+	page-break-before: always;
 }
 
 h3 {
@@ -114,15 +121,18 @@ hr {
 
 pre, code, kbd, samp {
 	color: #000;
-	font-family: monospace, monospace;
-	_font-family: 'courier new', monospace;
-	font-size: 0.98em;
+	font-family: 'courier new', monospace;
+	font-size: 1em;
 }
 
 pre {
-	page-break-inside: avoid;
+	background-color: #f7f7f7;
+	line-height: 1.5;
+	margin: 0 0 1em;
+	padding: 0.8125em;
+	page-break-inside: avoid !important;
 	white-space: pre;
-	white-space: pre-wrap;
+	white-space: pre-wrap !important;
 	word-wrap: break-word;
 }
 
@@ -305,18 +315,9 @@ table td {
 
 	@page :left {
 		margin: 15mm 20mm 15mm 10mm;
-}
+	}
 
 	@page :right {
 		margin: 15mm 10mm 15mm 20mm;
-}
-
-/*	p, h2, h3 {
-		orphans: 3;
-		widows: 3;
 	}
-
-	h2, h3 {
-		page-break-after: avoid;
-	}*/
 }

@@ -1,0 +1,15 @@
+body {
+	margin: 0 auto;
+}
+
+a {
+	word-wrap: break-word;
+}
+
+pre, code, kbd, samp {
+	white-space: pre-wrap;
+}
+
+code {
+	word-wrap: break-word;
+}

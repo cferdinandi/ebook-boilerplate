@@ -1,11 +1,11 @@
 
-# Your Book Title
-Your book subtitle
+# YOUR BOOK TITLE
+YOUR BOOK SUBTITLE
 
-By Your Name
+By YOUR  NAME
 
-Publisher
+PUBLISHER NAME
 
-Date or version number
+DATE OR VERSION NUMBER
 
-Copyright info
+COPYRIGHT INFO

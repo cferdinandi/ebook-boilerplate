@@ -1,0 +1,2 @@
+FILENAME='YOUR-BOOK-TITLE'
+pandoc assets/metadata.yml chapters/*.md -o $FILENAME.epub -S && pandoc assets/title.md assets/toc.md chapters/*.md assets/scripts.md -o $FILENAME.pdf -t html5 -S -V papersize:"letter" -c assets/pandoc.css && ebook-convert $FILENAME.epub $FILENAME.mobi && pandoc -H assets/pandoc-before.css -H assets/pandoc.css -H assets/pdf-overrides.css -H assets/pandoc-after.css assets/title.md assets/toc.md chapters/*.md assets/scripts.md -o $FILENAME.html -S && zip $FILENAME.zip $FILENAME.epub $FILENAME.mobi $FILENAME.pdf $FILENAME.html
