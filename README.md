@@ -65,12 +65,12 @@ zip BOOK-TITLE.zip BOOK-TITLE.epub BOOK-TITLE.mobi BOOK-TITLE.pdf BOOK-TITLE.htm
 
 ## Quirks and Other Issues
 
-0. I use wkhtmltopdf instead of LaTeX because it lets you style PDFs with CSS, giving you much more control over how things look.
-0. I don't apply any CSS to the EPUB and MOBI formats. I've had better support across a wider range of ereaders by letting them just use their default styles.
-0. wkhtmltopdf does not add page numbers to the generated PDF, and I've yet to find a way to make it do so.
-0. wkhtmltopdf also does not let you add a full-bleed cover image. You can either create a title page with an image on it, or generate a separate PDF and merge the two later.
-0. You **must** include an empty line before youR `h2` page-level markdown headers (ex. `## Chapter Title`) or Pandoc will just skip it when creating your file. No idea why.
-0. Break tags (`<br/>`) must include the self-closing slash (ie. don't do this: `<br>`) or they'll throw an error, even though slashless is valid HTML5.
+1. I use wkhtmltopdf instead of LaTeX because it lets you style PDFs with CSS, giving you much more control over how things look.
+2. I don't apply any CSS to the EPUB and MOBI formats. I've had better support across a wider range of ereaders by letting them just use their default styles.
+3. wkhtmltopdf does not add page numbers to the generated PDF, and I've yet to find a way to make it do so.
+4. wkhtmltopdf also does not let you add a full-bleed cover image. You can either create a title page with an image on it, or generate a separate PDF and merge the two later.
+5. You **must** include an empty line before youR `h2` page-level markdown headers (ex. `## Chapter Title`) or Pandoc will just skip it when creating your file. No idea why.
+6. Break tags (`<br/>`) must include the self-closing slash (ie. don't do this: `<br>`) or they'll throw an error, even though slashless is valid HTML5.
 
 
 
