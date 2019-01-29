@@ -42,6 +42,20 @@ There are two ways to configure the Ebook Boilerplate:
 1. Open up the `build.sh` file and change the defaults.
 2. Pass in flags with the `sh build.sh` command.
 
+### Defaults
+
+```bash
+# Defaults
+TITLE='ebook' # the title/filename
+EPUB='false' # if true, publish an EPUB version
+PDF='false' # if true, publish a PDF
+MOBI='false' # if true, publish a MOBI version
+HTML='false' # if true, public an HTML version
+ZIP='false' # if true, create a zip file
+ALL='true' # if true publish all formats (regardless of other settings)
+COVER='false' # if true, add a cover for the PDF version
+```
+
 ### Flags
 
 - **`-t 'title'`** - The title/filename to use for your ebooks (defaults).
