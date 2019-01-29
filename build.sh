@@ -26,14 +26,14 @@ done
 
 # EPUB
 if [ $ALL == 'true' ] || [ $EPUB == 'true' ] ; then
-	pandoc assets/metadata.yml chapters/*.md -o $TITLE.epub -S
+	pandoc assets/metadata.yml chapters/*.md -o $TITLE.epub -t epub+smart
 fi
 
 
 # PDF
 if [ $ALL == 'true' ] || [ $PDF == 'true' ] ; then
 	## Temp PDF
-	pandoc assets/title.md assets/toc.md chapters/*.md assets/scripts.md -o $TITLE-temp.pdf -t html5 -S -V papersize:"letter" -c assets/pandoc.css
+	pandoc assets/title.md assets/toc.md chapters/*.md assets/scripts.md -o $TITLE-temp.pdf -t html5+smart -V papersize:"letter" -c assets/pandoc.css --metadata pagetitle="$TITLE"
 
 	## Merge Cover
 	if [ $COVER == 'true' ] ; then
@@ -58,7 +58,7 @@ fi
 
 # HTML
 if [ $ALL == 'true' ] || [ $HTML == 'true' ] ; then
-	pandoc -H assets/pandoc-before.css -H assets/pandoc.css -H assets/pdf-overrides.css -H assets/pandoc-after.css assets/title.md assets/toc.md chapters/*.md assets/scripts.md -o $TITLE.html -S
+	pandoc -H assets/pandoc-before.css -H assets/pandoc.css -H assets/pdf-overrides.css -H assets/pandoc-after.css assets/title.md assets/toc.md chapters/*.md assets/scripts.md -o $TITLE.html -t html5+smart --metadata pagetitle="$TITLE"
 fi
 
 # Zip
