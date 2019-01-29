@@ -47,12 +47,12 @@ There are two ways to configure the Ebook Boilerplate:
 ```bash
 # Defaults
 TITLE='ebook' # the title/filename
-EPUB='false' # if true, publish an EPUB version
-PDF='false' # if true, publish a PDF
-MOBI='false' # if true, publish a MOBI version
-HTML='false' # if true, public an HTML version
-ZIP='false' # if true, create a zip file
-ALL='true' # if true publish all formats (regardless of other settings)
+EPUB='false'  # if true, publish an EPUB version
+PDF='false'   # if true, publish a PDF
+MOBI='false'  # if true, publish a MOBI version
+HTML='false'  # if true, public an HTML version
+ZIP='false'   # if true, create a zip file
+ALL='true'    # if true publish all formats (regardless of other settings)
 COVER='false' # if true, add a cover for the PDF version
 ```
 
