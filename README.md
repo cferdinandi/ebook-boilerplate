@@ -42,7 +42,7 @@ There are two ways to configure the Ebook Boilerplate:
 1. Open up the `build.sh` file and change the defaults.
 2. Pass in flags with the `sh build.sh` command.
 
-### Defaults
+### Defaults in `build.sh`
 
 ```bash
 # Defaults
