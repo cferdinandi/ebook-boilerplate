@@ -28,7 +28,7 @@ This will create your ebook files from your markdown files and assets.
 ## Project Structure
 
 - Add your book title, subtitle, author info, and so on to the `metadata.yml` and `title.md` files in the `assets` directory. Fields that you need to update are in *ALL CAPS* so that you can easily find them.
-- You can customize the header and footer for pages by editing `/assets/header.html` and `/assets/footer.html`. The following variables are supported: 'page', 'frompage', 'topage', 'webpage', 'section', 'subsection', 'date', 'isodate', 'time', 'title', 'doctitle', 'sitepage', 'sitepages'
+- You can customize the header and footer for pages by editing `/assets/header.html` and `/assets/footer.html`. The following [variables from wkhtmltopdf](https://wkhtmltopdf.org/usage/wkhtmltopdf.txt) are supported: `page`, `frompage`, `topage`, `webpage`, `section`, `subsection`, `date`, `isodate`, `time`, `title`, `doctitle`, `sitepage`, `sitepages`
 - Save your book content as markdown files in the `chapters` directory. I recommend prefixing chapter names with numbers to order them.
 - Book assets---CSS, metadata, etc.---go in the `assets` directory.
 - Save project images in the `assets/img` directory (or anywhere else that makes sense for you). These should be referenced in your chapters relative to the root directory: `![Image caption](assets/img/filename.jpg)` or `<img src="assets/img/filename.jpg">`.
