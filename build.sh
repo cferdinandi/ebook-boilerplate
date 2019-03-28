@@ -33,7 +33,7 @@ fi
 # PDF
 if [ $ALL == 'true' ] || [ $PDF == 'true' ] ; then
 	## Temp PDF
-	pandoc assets/title.md assets/toc.md chapters/*.md assets/scripts.md -o $TITLE-temp.pdf -t html5+smart -V papersize:"letter" -c assets/pandoc.css --metadata pagetitle="$TITLE"
+	pandoc assets/title.md assets/toc.md chapters/*.md assets/scripts.md -o $TITLE-temp.pdf -t html5+smart -V papersize="letter" -V footer-html="assets/footer.html" -V header-html="assets/header.html" -c assets/pandoc.css --metadata pagetitle="$TITLE"
 
 	## Merge Cover
 	if [ $COVER == 'true' ] ; then
