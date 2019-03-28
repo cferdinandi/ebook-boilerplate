@@ -28,6 +28,7 @@ This will create your ebook files from your markdown files and assets.
 ## Project Structure
 
 - Add your book title, subtitle, author info, and so on to the `metadata.yml` and `title.md` files in the `assets` directory. Fields that you need to update are in *ALL CAPS* so that you can easily find them.
+- You can customize the header and footer for pages by editing `/assets/header.html` and `/assets/footer.html`. The following variables are supported: 'page', 'frompage', 'topage', 'webpage', 'section', 'subsection', 'date', 'isodate', 'time', 'title', 'doctitle', 'sitepage', 'sitepages'
 - Save your book content as markdown files in the `chapters` directory. I recommend prefixing chapter names with numbers to order them.
 - Book assets---CSS, metadata, etc.---go in the `assets` directory.
 - Save project images in the `assets/img` directory (or anywhere else that makes sense for you). These should be referenced in your chapters relative to the root directory: `![Image caption](assets/img/filename.jpg)` or `<img src="assets/img/filename.jpg">`.
@@ -101,9 +102,8 @@ sh build.sh -c
 
 1. I use wkhtmltopdf instead of LaTeX because it lets you style PDFs with CSS, giving you much more control over how things look.
 2. I don't apply any CSS to the EPUB and MOBI formats. I've had better support across a wider range of ereaders by letting them just use their default styles.
-3. wkhtmltopdf does not add page numbers to the generated PDF, and I've yet to find a way to make it do so.
-4. You **must** include an empty line before youR `h2` page-level markdown headers (ex. `## Chapter Title`) or Pandoc will just skip it when creating your file. No idea why.
-5. Break tags (`<br/>`) must include the self-closing slash (ie. don't do this: `<br>`) or they'll throw an error, even though slashless is valid HTML5.
+3. You **must** include an empty line before youR `h2` page-level markdown headers (ex. `## Chapter Title`) or Pandoc will just skip it when creating your file. No idea why.
+4. Break tags (`<br/>`) must include the self-closing slash (ie. don't do this: `<br>`) or they'll throw an error, even though slashless is valid HTML5.
 
 
 
