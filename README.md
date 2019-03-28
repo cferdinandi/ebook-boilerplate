@@ -102,7 +102,7 @@ sh build.sh -c
 
 1. I use wkhtmltopdf instead of LaTeX because it lets you style PDFs with CSS, giving you much more control over how things look.
 2. I don't apply any CSS to the EPUB and MOBI formats. I've had better support across a wider range of ereaders by letting them just use their default styles.
-3. You **must** include an empty line before youR `h2` page-level markdown headers (ex. `## Chapter Title`) or Pandoc will just skip it when creating your file. No idea why.
+3. You **must** include an empty line before your `h2` page-level markdown headers (ex. `## Chapter Title`) or Pandoc will just skip it when creating your file. No idea why.
 4. Break tags (`<br/>`) must include the self-closing slash (ie. don't do this: `<br>`) or they'll throw an error, even though slashless is valid HTML5.
 
 
